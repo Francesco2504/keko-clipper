@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="./">Keko Clipper</a>
+  <nav><a href="./">Home</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></nav>
+</header>
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="muted">Last updated: 25 November 2026</p>
+
+  <p>Keko Clipper ("the tool") is an internal tool used only by the people who run the YouTube channel @KekoClips25.
+  It uses <b>YouTube API Services</b>. By using the tool you also agree to the
+  <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>, and Google's handling of data is described in the
+  <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+  <h2>Who uses the tool</h2>
+  <p>Only the operators of the @KekoClips25 channel. There is no public sign-up and no other users.</p>
+
+  <h2>What data we access</h2>
+  <ul>
+    <li><b>Google OAuth token</b> for the @KekoClips25 channel, with the scope <code>youtube.upload</code>, used only to upload our own approved videos.</li>
+    <li><b>Video metadata we write ourselves</b> (title, description, tags) and the ID of each uploaded video, to keep track of what was published.</li>
+  </ul>
+  <p>We do not access, collect or store any data of other YouTube users, viewers or channels. We do not read comments, analytics,
+  subscribers or private account information through the API.</p>
+
+  <h2>How we use, store and share it</h2>
+  <ul>
+    <li>The OAuth token is stored encrypted in our own self-hosted automation server (n8n), which is not publicly accessible.</li>
+    <li>Upload records (clip name, title, YouTube video ID, date) are stored in our private database.</li>
+    <li>We do not sell, share or transfer any of this data to third parties, and we do not use it for advertising.</li>
+  </ul>
+
+  <h2>Cookies and device information</h2>
+  <p>The tool does not place cookies or collect device information from anyone. This website does not use cookies or analytics.</p>
+
+  <h2>Retention and deletion</h2>
+  <p>Upload records are kept while the channel is active and deleted on request. Access can be revoked at any time from
+  <a href="https://security.google.com/settings/security/permissions">Google security settings</a>; after revocation the token
+  stops working and is deleted from our server within 7 days. Stored data obtained through the API is refreshed or deleted at least every 30 days
+  if it is no longer needed.</p>
+
+  <h2>Contact</h2>
+  <p>For any question about this policy, open an issue at
+  <a href="https://github.com/Francesco2504/keko-clipper/issues">github.com/Francesco2504/keko-clipper</a>.</p>
+</main>
+<footer>
+  <span>Keko Clipper</span>
+  <a href="./">Home</a>
+  <a href="terms.html">Terms of Service</a>
+</footer>
+</body>
+</html>

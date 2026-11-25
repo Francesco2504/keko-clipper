@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Keko Clipper</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="./">Keko Clipper</a>
+  <nav><a href="./">Home</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></nav>
+</header>
+<main>
+  <h1>Keko Clipper</h1>
+  <p>Keko Clipper is a private, internal tool used only by the two people who run the YouTube channel
+  <a href="https://www.youtube.com/@KekoClips25">@KekoClips25</a>. It is not offered to the public and has no user sign-up.</p>
+
+  <h2>What it does</h2>
+  <ol>
+    <li>Our own server prepares short vertical clips (YouTube Shorts) with captions.</li>
+    <li>Each finished clip is sent to our private Telegram group, where one of us watches it and presses <b>Approve</b> or <b>Reject</b>.</li>
+    <li>Only approved clips are uploaded to <b>our own channel</b> with the YouTube Data API (<code>videos.insert</code>), with the title and description we wrote.</li>
+  </ol>
+  <p>Every upload is reviewed by a person first. The tool never uploads to any other channel, never reads or changes other users' data,
+  and does not use any other YouTube API method.</p>
+
+  <h2>How it works</h2>
+  <p class="muted">Architecture</p>
+  <img class="diagram" src="architecture.png" alt="Architecture: our server and n8n prepare clips, Telegram is used for human approval, approved clips are uploaded to our channel with the YouTube Data API">
+  <p class="muted">User flow</p>
+  <img class="diagram" src="user-flow.png" alt="User flow: clip ready, preview in Telegram, approve, upload to our YouTube channel, confirmation">
+
+  <h2>Google sign-in</h2>
+  <p>The channel owner authorizes the tool once with Google OAuth 2.0, scope <code>https://www.googleapis.com/auth/youtube.upload</code>.
+  The resulting token is stored only in our own automation server. It can be revoked at any time from
+  <a href="https://security.google.com/settings/security/permissions">Google security settings</a>.</p>
+</main>
+<footer>
+  <span>Keko Clipper · internal tool of the @KekoClips25 channel</span>
+  <a href="privacy.html">Privacy Policy</a>
+  <a href="terms.html">Terms of Service</a>
+</footer>
+</body>
+</html>
